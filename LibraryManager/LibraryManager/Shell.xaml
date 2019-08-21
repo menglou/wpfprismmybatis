@@ -1,0 +1,199 @@
+﻿<Window x:Class="LibraryManager.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryManager"
+        xmlns:prism="http://www.codeplex.com/prism"
+        mc:Ignorable="d"
+        Title="Shell" Height="1080" Width="1920" WindowStyle="None" ShowInTaskbar="False" WindowState="Maximized"  >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="1009*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.Row="0" BorderThickness="1" BorderBrush="#ABC4E5" >
+            <Grid Grid.Column="0" Grid.Row="0" Background="#ABC4E5" Opacity="0.6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32*"/>
+                    <ColumnDefinition Width="150*"/>
+                    <ColumnDefinition Width="95*"/>
+                    <ColumnDefinition Width="1556*"/>
+                    <ColumnDefinition Width="42*"/>
+                    <ColumnDefinition Width="42*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="4" Width="40" Height="40"  Background="#ABC4E5" Content="—" FontWeight="Bold" BorderThickness="0.5" BorderBrush="#ABC4E5" HorizontalAlignment="Right"  VerticalContentAlignment="Center" Padding="0,0,0,10"/>
+                <Button Grid.Row="0" Grid.Column="5" Width="40" Height="40"  Background="#ABC4E5" Content="x" FontWeight="Bold" BorderThickness="0.5" FontSize="20" BorderBrush="#ABC4E5" HorizontalAlignment="Left" Padding="0,0,0,10"/>
+                <!--<Label  Grid.Row="0" Grid.Column="1" Content="欢迎您使用本系统：" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16"></Label>
+                <Label  Grid.Row="0" Grid.Column="2" Content="娄猛" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="16"></Label>-->
+            </Grid>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="0" BorderBrush="#abc4e5">
+            <Grid Background="#abc4e5" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="166*"/>
+                    <ColumnDefinition Width="122*"/>
+                    <ColumnDefinition Width="1625*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="[图书馆借阅关系系统]" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" />
+                <Label Content="V2.0" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="508*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1388*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="3" BorderBrush="#DCDCDC" Margin="0,1.1,0.4,0.8"  Grid.Column="1" >
+                <Grid Background="#F1F1F1">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="155*"/>
+                        <RowDefinition Height="344*"/>
+                        <RowDefinition Height="486*"/>
+
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="新增图书" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="40"></Label>
+                    <Calendar  Grid.Row="1"   >
+
+                    </Calendar>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="21*"/>
+                            <ColumnDefinition Width="457*"/>
+                            <ColumnDefinition Width="27*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="70*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="70*"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="78*"/>
+                            <RowDefinition Height="100*"/>
+                            <RowDefinition Height="78*"/>
+                            <RowDefinition Height="80*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Column="1" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30*"/>
+                                <ColumnDefinition Width="185*"/>
+                                <ColumnDefinition Width="25*"/>
+                                <ColumnDefinition Width="191*"/>
+                                <ColumnDefinition Width="28*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="1" Name="btnaddbook" Command="{Binding RedirctCommand}" CommandParameter="addbook" >
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="./Images/MngIncdown.bmp" Width="22" ></Image>
+                                        <TextBlock Text="添加图书"  FontSize="20" Width="100" Margin="7,0,0,0"></TextBlock>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                            <Button Grid.Column="3" Name="btnbookshelves" Command="{Binding RedirctCommand}" CommandParameter="bookshelves">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="./Images/about.ico" Width="22" ></Image>
+                                        <TextBlock Text="图书上架" FontSize="20" Width="100" Margin="7,0,0,0"></TextBlock>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                        <Grid Grid.Column="1" Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30*"/>
+                                <ColumnDefinition Width="185*"/>
+                                <ColumnDefinition Width="25*"/>
+                                <ColumnDefinition Width="191*"/>
+                                <ColumnDefinition Width="28*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="1" Name="btnbookmaintain"  Command="{Binding RedirctCommand}" CommandParameter="bookmaintain" >
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="./Images/PROPS.ICO" Width="22" ></Image>
+                                        <TextBlock Text="图书维护" FontSize="20" Width="100" Margin="7,0,0,0"></TextBlock>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                            <Button Grid.Column="3" Name="btnmembermanager" Command="{Binding RedirctCommand}" CommandParameter="membermanager" >
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="./Images/people.ico" Width="22" ></Image>
+                                        <TextBlock Text="会员管理" FontSize="20" Width="100" Margin="7,0,0,0"></TextBlock>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                        <Grid Grid.Column="1" Grid.Row="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30*"/>
+                                <ColumnDefinition Width="185*"/>
+                                <ColumnDefinition Width="25*"/>
+                                <ColumnDefinition Width="191*"/>
+                                <ColumnDefinition Width="28*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="1" Name="btnbookborrow" Command="{Binding RedirctCommand}" CommandParameter="bookborrow">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="./Images/BOOKS01.ICO" Width="22" ></Image>
+                                        <TextBlock Text="图书出借" FontSize="20" Width="100" Margin="7,0,0,0" ></TextBlock>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                            <Button Grid.Column="3" Name="btnbookreturn" Command="{Binding RedirctCommand}" CommandParameter="bookreturn">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="./Images/CustomerOrder.ico" Width="22" ></Image>
+                                        <TextBlock Text="图书归还" FontSize="20" Width="100" Margin="7,0,0,0"></TextBlock>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                        <Grid Grid.Column="1" Grid.Row="7" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30*"/>
+                                <ColumnDefinition Width="185*"/>
+                                <ColumnDefinition Width="25*"/>
+                                <ColumnDefinition Width="191*"/>
+                                <ColumnDefinition Width="28*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="1" Name="btnmodifypwd" Command="{Binding RedirctCommand}" CommandParameter="modifypwd" >
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="./Images/key_32.ICO" Width="22" ></Image>
+                                        <TextBlock Text="修改密码" FontSize="20" Width="100" Margin="7,0,0,0"></TextBlock>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                            <Button Grid.Column="3" Name="btnclosefrm" Command="{Binding RedirctCommand}" CommandParameter="closefrm">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="./Images/Close.ico" Width="22" ></Image>
+                                        <TextBlock Text="退出系统" FontSize="20" Width="100" Margin="7,0,0,0"></TextBlock>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+            <Border BorderThickness="3" BorderBrush="#DCDCDC" Margin="0,1.1,0.4,0.8"  Grid.Column="3" >
+                <!--<Grid >
+                    <Grid.Background>
+                        <ImageBrush ImageSource="./Images/图书馆背景.jpg"></ImageBrush>
+                    </Grid.Background>
+                </Grid>-->
+                <ContentControl prism:RegionManager.RegionName="MainRegion" Width="1385" Height="976" x:Name="MainRegion"></ContentControl>
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>

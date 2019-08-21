@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="TestApp" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <alias>
+    <typeAlias alias="MemberManagerReaderRoles" type="EntityModel.ReaderRoles, EntityModel"/>
+     <typeAlias alias="MemberManagerReaders" type="EntityModel.Readers, EntityModel"/>
+  </alias>
+  <statements>
+    <statement id="select_allReaderRoles" resultClass="MemberManagerReaderRoles">
+      select RoleId, RoleName, AllowDays, AllowCounts from ReaderRoles
+    </statement>
+    <statement id="insert_Readers" parameterClass="MemberManagerReaders" resultClass="MemberManagerReaders" >
+      
+      declare @ReaderId uniqueidentifier
+      set @ReaderId=newid()
+      
+      declare @Regtime datetime
+      set @Regtime=getdate()
+      
+      insert into Readers
+      (
+      ReaderId,
+      ReadingCard,
+      ReaderName,
+      Gender,
+      IDCard,
+      ReaderAddress,
+      PostCode,
+      PhoneNumber,
+      RoleId,
+      ReaderImage,
+      RegTime,
+      ReaderPwd,
+      AdminId,
+      StatusId
+      )
+      values
+      (
+      @ReaderId,
+      #ReadingCard#,
+      #ReaderName#,
+      #Gender#,
+      #IDCard#,
+      #ReaderAddress#,
+      #PostCode#,
+      #PhoneNumber#,
+      #RoleId#,
+      #ReaderImage#,
+      @Regtime,
+      #ReaderPwd#,
+      #AdminId#,
+      0
+      );select ReaderId from Readers where ReaderId= @ReaderId
+    </statement>
+
+    <statement id="select_Readers" parameterClass="MemberManagerReaders" resultClass="MemberManagerReaders" >
+
+      declare @PageCount int
+      select @PageCount=count(*) from Readers
+      <dynamic prepend="WHERE">
+        <isNotEmpty prepend=" " property="RoleId">RoleId=#RoleId#</isNotEmpty>
+        <isNotEmpty prepend="and" property="IDCard">IDCard=#IDCard#</isNotEmpty>
+        <isNotEmpty prepend="and" property="ReadingCard">ReadingCard=#ReadingCard#</isNotEmpty>
+      </dynamic>
+
+      declare @ReaderCount int
+      select @ReaderCount=count(*) from Readers
+      <dynamic prepend="WHERE">
+       <isNotEmpty prepend=" " property="RoleId">RoleId=#RoleId#</isNotEmpty>
+       <isNotEmpty prepend="and" property="IDCard">IDCard=#IDCard#</isNotEmpty>
+       <isNotEmpty prepend="and" property="ReadingCard">ReadingCard=#ReadingCard#</isNotEmpty>
+      </dynamic>
+
+      select
+      @ReaderCount 'ReaderCount',
+      @PageCount 'PageCount',
+      ReaderId,
+      ReadingCard,
+      ReaderName,
+      Gender,
+      IDCard,
+      ReaderAddress,
+      PostCode,
+      PhoneNumber,
+      Readers.RoleId,
+      ReaderImage,
+      RegTime,
+      ReaderPwd,
+      AdminId,
+      StatusId,
+      RoleName
+      from Readers
+      inner join ReaderRoles on ReaderRoles.RoleId=Readers.RoleId
+      <dynamic prepend="WHERE">
+       <isNotEmpty prepend=" " property="RoleId">Readers.RoleId=#RoleId#</isNotEmpty>
+       <isNotEmpty prepend="and" property="IDCard">IDCard=#IDCard#</isNotEmpty>
+       <isNotEmpty prepend="and" property="ReadingCard">ReadingCard=#ReadingCard#</isNotEmpty>
+        <isNotEmpty prepend="and" property="ReaderId">ReaderId=#ReaderId#</isNotEmpty>
+      </dynamic>
+
+      ORDER BY RegTime DESC
+      <isNotNull prepend="" property="PageSize">
+        <isNotNull prepend="" property="PageIndex">
+          OFFSET ( #PageIndex# - 1 ) * #PageSize# ROWS
+          FETCH NEXT #PageSize# ROWS ONLY
+        </isNotNull>
+      </isNotNull>
+
+
+    </statement>
+
+    <statement id="select_ReadersByReaderid" parameterClass="MemberManagerReaders" resultClass="MemberManagerReaders" >
+
+      select
+      ReaderId,
+      ReadingCard,
+      ReaderName,
+      Gender,
+      IDCard,
+      ReaderAddress,
+      PostCode,
+      PhoneNumber,
+      Readers.RoleId,
+      ReaderImage,
+      RegTime,
+      ReaderPwd,
+      AdminId,
+      StatusId,
+      RoleName
+      from Readers
+      inner join ReaderRoles on ReaderRoles.RoleId=Readers.RoleId
+      <dynamic prepend="WHERE">
+        <isNotEmpty prepend=" " property="ReaderId">ReaderId=#ReaderId#</isNotEmpty>
+      </dynamic>
+
+    </statement>
+  </statements>
+</sqlMap>

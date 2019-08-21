@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="TestApp" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <alias>
+    <typeAlias alias="SysAdmin" type="EntityModel.SysAdmin, EntityModel"/>
+  </alias>
+  <statements>
+    <!--插入登录信息-->
+    <statement  id="insert_sysadmin" parameterClass="SysAdmin" resultClass="int">
+
+      insert into SysAdmin (AdminName, LoginPwd, StatuId, RoleId)
+
+      values (#AdminName#,#LoginPwd#,#StatuId#,#RoleId#)
+
+    </statement>
+    
+    <!--修改登录信息-->
+    <statement  id="update_sysadmin" parameterClass="SysAdmin" resultClass="int">
+
+      update SysAdmin  set  AdminName=#AdminName#, LoginPwd=#LoginPwd#, StatuId=#StatuId#, RoleId=#RoleId#
+      
+      where AdminId=#AdminId#
+
+    </statement>
+    <!--删除登陆信息-->
+    <statement  id="delete_sysadmin" parameterClass="SysAdmin" resultClass="int">
+
+      delete from SysAdmin  where AdminId=#AdminId#
+      
+    </statement>
+    
+    <!--查询登陆信息-->
+     <statement  id="select_sysadmin" parameterClass="SysAdmin" resultClass="SysAdmin">
+
+      select AdminId, AdminName, LoginPwd, StatuId, RoleId from SysAdmin
+      
+     <dynamic prepend="WHERE">
+       <isNotEmpty prepend=" " property="AdminId">AdminId=#AdminId#</isNotEmpty>
+      <isNotEmpty prepend="and" property="AdminName">AdminName=#AdminName#</isNotEmpty>
+        <isNotEmpty prepend="and" property="StatuId">StatuId=#StatuId#</isNotEmpty>
+      <isNotEmpty prepend="and" property="RoleId">RoleId=#RoleId#</isNotEmpty>
+     </dynamic>
+
+    </statement>
+  
+  </statements>
+
+
+</sqlMap>
+

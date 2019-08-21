@@ -1,0 +1,39 @@
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\DAL.dll
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\DAL.pdb
+E:\自己做 的开发项目\LibraryManager\DAL\obj\Debug\DAL.dll
+E:\自己做 的开发项目\LibraryManager\DAL\obj\Debug\DAL.pdb
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\SqlMap.config
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\Castle.Core.dll
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\EntityModel.dll
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\IBatisNet.Common.dll
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\IBatisNet.Common.Logging.Log4Net.dll
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\IBatisNet.DataMapper.dll
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\log4net.dll
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\EntityModel.pdb
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\Castle.Core.xml
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\IBatisNet.Common.xml
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\IBatisNet.Common.Logging.Log4Net.xml
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\IBatisNet.DataMapper.xml
+E:\自己做 的开发项目\LibraryManager\DAL\bin\Debug\log4net.xml
+E:\自己做 的开发项目\LibraryManager\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\SqlMap.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\DAL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\DAL.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\Castle.Core.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\EntityModel.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\IBatisNet.Common.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\IBatisNet.Common.Logging.Log4Net.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\IBatisNet.DataMapper.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\log4net.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\EntityModel.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\Castle.Core.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\IBatisNet.Common.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\IBatisNet.Common.Logging.Log4Net.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\IBatisNet.DataMapper.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\bin\Debug\log4net.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\SqlMap.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\DAL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\DAL.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\obj\Debug\DAL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\DAL\obj\Debug\DAL.pdb

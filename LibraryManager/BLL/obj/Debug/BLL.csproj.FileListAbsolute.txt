@@ -1,0 +1,35 @@
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\BLL.dll
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\BLL.pdb
+E:\自己做 的开发项目\LibraryManager\BLL\obj\Debug\BLL.dll
+E:\自己做 的开发项目\LibraryManager\BLL\obj\Debug\BLL.pdb
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\SqlMap.config
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\DAL.dll
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\EntityModel.dll
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\IBatisNet.DataMapper.dll
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\IBatisNet.Common.dll
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\Castle.Core.dll
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\DAL.pdb
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\EntityModel.pdb
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\IBatisNet.DataMapper.xml
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\IBatisNet.Common.xml
+E:\自己做 的开发项目\LibraryManager\BLL\bin\Debug\Castle.Core.xml
+E:\自己做 的开发项目\LibraryManager\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\SqlMap.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\BLL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\BLL.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\DAL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\EntityModel.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\IBatisNet.DataMapper.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\IBatisNet.Common.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\Castle.Core.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\DAL.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\EntityModel.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\IBatisNet.DataMapper.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\IBatisNet.Common.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\bin\Debug\Castle.Core.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\SqlMap.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\BLL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\BLL.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\obj\Debug\BLL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\BLL\obj\Debug\BLL.pdb

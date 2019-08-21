@@ -1,0 +1,10 @@
+E:\自己做 的开发项目\LibraryManager\EntityModel\bin\Debug\EntityModel.dll
+E:\自己做 的开发项目\LibraryManager\EntityModel\bin\Debug\EntityModel.pdb
+E:\自己做 的开发项目\LibraryManager\EntityModel\obj\Debug\EntityModel.dll
+E:\自己做 的开发项目\LibraryManager\EntityModel\obj\Debug\EntityModel.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\EntityModel\bin\Debug\EntityModel.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\EntityModel\bin\Debug\EntityModel.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\EntityModel.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\EntityModel.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\EntityModel\obj\Debug\EntityModel.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\EntityModel\obj\Debug\EntityModel.pdb

@@ -1,0 +1,17 @@
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\bin\Debug\FrmBookMaintain.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\bin\Debug\FrmBookMaintain.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\bin\Debug\CustomerControl.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\bin\Debug\CustomerControl.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\SqlMap.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\FrmBookMaintain.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\FrmBookMaintain.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\FrmBookMaintain.csprojResolveAssemblyReference.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\Style\DataGridStyle.baml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\View\FrmBookMaintain.g.cs
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\FrmBookMaintain_MarkupCompile.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\FrmBookMaintain_MarkupCompile.lref
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\View\FrmBookMaintain.baml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\FrmBookMaintain.g.resources
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\FrmBookMaintain.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\FrmBookMaintain\obj\Debug\FrmBookMaintain.pdb

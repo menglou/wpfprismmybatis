@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="TestApp" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <alias>
+    <typeAlias alias="Categories" type="EntityModel.Categories, EntityModel"/>
+    <typeAlias alias="Publishers" type="EntityModel.Publishers, EntityModel"/>
+    <typeAlias alias="Books" type="EntityModel.Books, EntityModel"/>
+  </alias>
+
+  <resultMaps>
+    <resultMap id="SelectallCategories" class="Categories">
+      <result property="CategoryId" column="CategoryId"/>
+      <result property="CategoryName" column="CategoryName"/>
+    </resultMap>
+  </resultMaps>
+  
+  <statements>
+    <!--获取所有的书分类-->
+    <statement id="select_allCategories" resultClass="Categories">
+      select CategoryId, CategoryName from Categories
+    </statement>
+    <!--获取所有的出版社-->
+    <statement id="select_allPublishers" resultClass="Publishers">
+      select PublisherId, PublisherName from Publishers
+    </statement>
+
+    <!--获取所有的出版社-->
+    <statement  id="insert_book" parameterClass="Books" resultClass="Books">
+
+      declare @BookId uniqueidentifier
+      set @BookId=newid()
+
+      DECLARE @RegTime DATETIME
+      SET @RegTime=GETDATE()
+      insert into Books
+      (
+      BookId,
+      BarCode,
+      BookName,
+      Author,
+      PublisherId,
+      PublishDate,
+      BookCategory,
+      UnitPrice,
+      BookImage,
+      BookCount,
+      Remainder,
+      BookPosition,
+      RegTime
+      )
+      values
+      (
+      @BookId,
+      #BarCode#,
+      #BookName#,
+      #Author#,
+      #PublisherId#,
+      #PublishDate#,
+      #BookCategory#,
+      #UnitPrice#,
+      #BookImage#,
+      #BookCount#,
+      #BookCount#,
+      #BookPosition#,
+      @RegTime
+      );select BookId from Books where BookId= @BookId
+
+    </statement >
+    
+    <statement id="select_book" resultClass="Books" parameterClass="Books" >
+      select 
+      
+      BookId, 
+      BarCode, 
+      BookName, 
+      Author, 
+      PublisherId, 
+      PublishDate, 
+      BookCategory, 
+      UnitPrice, 
+      BookImage, 
+      BookCount, 
+      Remainder, 
+      BookPosition,
+      RegTime 
+      from Books
+      
+      <!--where 1=1-->
+      <dynamic prepend="WHERE">
+         BookId=#BookId#
+       <!--<isNotEmpty prepend="AND" property="BarCode">BarCode=#BarCode#</isNotEmpty>
+       <isNotEmpty prepend="and" property="BookName">BookName=#BookName#</isNotEmpty>
+       <isNotEmpty prepend="and" property="PublisherId">PublisherId=#PublisherId#</isNotEmpty>
+       <isNotEmpty prepend="and" property="BookCategory">BookCategory=#BookCategory#</isNotEmpty>
+       <isNotEmpty prepend="and" property="BookPosition">BookId=#BookPosition#</isNotEmpty>-->
+      </dynamic>
+      
+      
+    </statement>
+    
+    <statement id="update_book" resultClass="int" parameterClass="Books" >
+      update Books set  
+      
+      BookId=#BookId#, 
+      BarCode=#BarCode#, 
+      BookName=#BookName#, 
+      Author=#Author#, 
+      PublisherId=#PublisherId#, 
+      PublishDate=#PublishDate#, 
+      BookCategory=#BookCategory#, 
+      UnitPrice=#UnitPrice#, 
+      BookImage=#BookImage#, 
+      BookCount=#BookCount#, 
+      Remainder=#BookCount#, 
+      BookPosition=#BookPosition#,
+      RegTime=#RegTime# 
+      <!--where 1=1-->
+      <dynamic prepend="WHERE">
+       <!--<isNotEmpty prepend=" " property="BookId">BookId=#BookId#</isNotEmpty>-->
+       <isNotEmpty prepend=" " property="BookId">BookId=#BookId#</isNotEmpty>
+       <!--<isNotEmpty prepend="and" property="BookName">BookName=#BookName#</isNotEmpty>
+       <isNotEmpty prepend="and" property="PublisherId">PublisherId=#PublisherId#</isNotEmpty>
+       <isNotEmpty prepend="and" property="BookCategory">BookCategory=#BookCategory#</isNotEmpty>
+       <isNotEmpty prepend="and" property="BookPosition">BookId=#BookPosition#</isNotEmpty>-->
+      </dynamic>
+    </statement>
+    
+  </statements>
+  
+</sqlMap>

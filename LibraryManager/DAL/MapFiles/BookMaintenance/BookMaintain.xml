@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="TestApp" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <alias>
+    <typeAlias alias="MaintainCategories" type="EntityModel.Categories, EntityModel"/>
+    <typeAlias alias="MaintainPublishers" type="EntityModel.Publishers, EntityModel"/>
+    <typeAlias alias="MaintainBooks" type="EntityModel.Books, EntityModel"/>
+  </alias>
+  <statements>
+       <statement id="selelct_book_bycontation"  parameterClass="MaintainBooks" resultClass="MaintainBooks">
+         
+        declare @PageCount int
+        select @PageCount=count(*) from Books t1
+        <dynamic prepend="WHERE">
+         <isNotEmpty prepend=" " property="BookCategory">t1.BookCategory=#BookCategory#</isNotEmpty>
+         <isNotEmpty prepend="AND" property="BarCode">t1.BarCode=#BarCode#</isNotEmpty>
+         <isNotEmpty prepend="AND" property="BookName">t1.BookName=#BookName#</isNotEmpty>
+      </dynamic>
+         
+         
+         
+        select
+        @PageCount 'PageCount',<!--总记录数-->
+        t1.BookId,
+        t1.BarCode,
+        t1.BookName,
+        t1.Author,
+        t1.PublisherId,
+        t2.PublisherName,
+        t1.PublishDate,
+        t1.BookCategory,
+        t1.UnitPrice,
+        t1.BookImage,
+        t1.BookCount,
+        t1.Remainder,
+        t1.BookPosition,
+        t1.RegTime
+        from Books t1
+        inner join Publishers t2 on t1.PublisherId=t2.PublisherId
+
+        <dynamic prepend="WHERE">
+         <isNotEmpty prepend=" " property="BookCategory">t1.BookCategory=#BookCategory#</isNotEmpty>
+         <isNotEmpty prepend="AND" property="BarCode">t1.BarCode=#BarCode#</isNotEmpty>
+         <isNotEmpty prepend="AND" property="BookName">t1.BookName=#BookName#</isNotEmpty>
+      </dynamic>
+
+        <!--翻页用-->
+        ORDER BY t1.RegTime DESC
+        <isNotNull prepend="" property="PageSize">
+          <isNotNull prepend="" property="PageIndex">
+            OFFSET ( #PageIndex# - 1 ) * #PageSize# ROWS
+            FETCH NEXT #PageSize# ROWS ONLY
+          </isNotNull>
+        </isNotNull>
+      </statement>
+
+       <statement id="bookmaintain_update_book" resultClass="int" parameterClass="MaintainBooks" >
+          update Books set
+
+          BookName=#BookName#,
+          Author=#Author#,
+          PublisherId=#PublisherId#,
+          PublishDate=#PublishDate#,
+          BookCategory=#BookCategory#,
+          UnitPrice=#UnitPrice#,
+          BookImage=#BookImage#,
+          BookPosition=#BookPosition#
+         
+          <!--where 1=1-->
+          <dynamic prepend="WHERE">
+            <!--<isNotEmpty prepend=" " property="BookId">BookId=#BookId#</isNotEmpty>-->
+            <isNotEmpty prepend=" " property="BookId">BookId=#BookId#</isNotEmpty>
+            <!--<isNotEmpty prepend="and" property="BookName">BookName=#BookName#</isNotEmpty>
+           <isNotEmpty prepend="and" property="PublisherId">PublisherId=#PublisherId#</isNotEmpty>
+           <isNotEmpty prepend="and" property="BookCategory">BookCategory=#BookCategory#</isNotEmpty>
+           <isNotEmpty prepend="and" property="BookPosition">BookId=#BookPosition#</isNotEmpty>-->
+          </dynamic>
+        </statement>
+  </statements>
+</sqlMap>

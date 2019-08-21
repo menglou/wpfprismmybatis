@@ -1,0 +1,271 @@
+﻿<UserControl x:Class="FrmBookMaintain.View.FrmBookMaintain"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FrmBookMaintain.View"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:conver="clr-namespace:FrmBookMaintain.Converter"
+             xmlns:page="clr-namespace:CustomerControl;assembly=CustomerControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="976" d:DesignWidth="1385" Background="White">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Style/DataGridStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <conver:DataConverter x:Key="dataConverter"></conver:DataConverter>
+            <Style x:Key="DataGridTextColumnCenterSytle" TargetType="{x:Type TextBlock}">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="1342*"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="940*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="509*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="308*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="2" Grid.Column="0" BorderThickness="1" BorderBrush="Black">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="441*"/>
+                        <RowDefinition Height="67*"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Grid.Row="0" Visibility="Hidden" ItemsSource="{Binding ListBook}"  Name="bookgrid"  IsReadOnly="True" RowHeaderWidth="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False"/>
+
+                    <TextBlock Visibility="Hidden" Name="fistpage" Text="{Binding Fistpage,Mode=TwoWay}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="nextpage" Text="{Binding Nextpage,Mode=TwoWay}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="previewpage" Text="{Binding Previewpage,Mode=TwoWay}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="lastpage" Text="{Binding LastPage,Mode=TwoWay}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="redirecttopage" Text="{Binding Redirttopage,Mode=TwoWay}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="pagecount" Text="{Binding PageCount}"></TextBlock>
+
+                    <TextBlock Visibility="Hidden" Name="bookcategoryid" Text="{Binding CategoryId}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="barcode" Text="{Binding BookBarcode}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="bookname" Text="{Binding BookName}"></TextBlock>
+
+                    <page:Paging Grid.Row="1" Width="900" Height="40" Name="page" HorizontalAlignment="Left" Barcode="{Binding Path=Text,ElementName=barcode}" BookCategoryId="{Binding Path=Text,ElementName=bookcategoryid}" BookName="{Binding Path=Text,ElementName=bookname}"  BookList="{Binding Path=ItemsSource,ElementName=bookgrid}" PageCount="{Binding Path=Text,ElementName=pagecount}" ButtonFistpage="{Binding Path=Text,ElementName=fistpage,Mode=TwoWay}" ButtonNexpage="{ Binding Path=Text,ElementName=nextpage,Mode=TwoWay}" ButtonPreviewpage="{Binding Path=Text,ElementName=previewpage,Mode=TwoWay}" ButtonLastpage="{Binding Path=Text,ElementName=lastpage,Mode=TwoWay}" ButtonRedirttopage="{Binding Path=Text,ElementName=redirecttopage,Mode=TwoWay}" ></page:Paging>
+                    <TextBlock Visibility="Hidden" Name="pagesize" Text="{Binding PageSize,ElementName=page}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="pageindex" Text="{Binding PageIndex,ElementName=page}"></TextBlock>
+
+                    <TextBlock Visibility="Hidden" Name="txtfistpage" Text="{Binding ButtonFistpage,ElementName=page}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="txtnextpage" Text="{Binding ButtonNexpage,ElementName=page}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="txtpreviewpage" Text="{Binding ButtonPreviewpage,ElementName=page}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="txtlastpage" Text="{Binding ButtonLastpage,ElementName=page}"></TextBlock>
+                    <TextBlock Visibility="Hidden" Name="txtredirecttopage" Text="{Binding ButtonRedirttopage,ElementName=page}"></TextBlock>
+                  
+                    <DataGrid Grid.Row="0" ItemsSource="{Binding BookList,ElementName=page}"  Name="bookgrids"  IsReadOnly="True" RowHeaderWidth="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="书籍条码" Width="250" Binding="{Binding BarCode}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="图书名称" Width="210" Binding="{Binding BookName}" ></DataGridTextColumn>
+                            <DataGridTextColumn Header="出版社" Width="200" Binding="{Binding PublisherName}" ></DataGridTextColumn>
+                            <DataGridTextColumn Header="主编" Width="120" Binding="{Binding Author}" ></DataGridTextColumn>
+                            <DataGridTextColumn Header="收藏总数" Width="150" Binding="{Binding BookCount}" ></DataGridTextColumn>
+                            <DataGridTextColumn Header="可借总数" Width="150" Binding="{Binding Remainder}" ></DataGridTextColumn>
+                            <DataGridTextColumn Header="书架位置" Width="260" Binding="{Binding BookPosition}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="书架位置" Width="260" Binding="{Binding BookId}" Visibility="Hidden"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDoubleClick">
+                                <i:InvokeCommandAction Command="{Binding DataGridAction}" CommandParameter="{Binding ElementName=bookgrids}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <DataGrid.ContextMenu>
+                            <ContextMenu Name="cm" StaysOpen="true">
+                                <MenuItem Header="修改"/>
+                                <MenuItem Header="查看详情"/>
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
+                    </DataGrid>
+                </Grid>
+            </Border>
+            <Border Grid.Row="0" BorderThickness="1" BorderBrush="Black">
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="748*"/>
+                        <ColumnDefinition Width="145*"/>
+                        <ColumnDefinition Width="162*"/>
+                        <ColumnDefinition Width="126*"/>
+                        <ColumnDefinition Width="161*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="按分类查询" Grid.Column="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="73*"/>
+                                <ColumnDefinition Width="108*"/>
+                                <ColumnDefinition Width="74*"/>
+                                <ColumnDefinition Width="136*"/>
+                                <ColumnDefinition Width="74*"/>
+                                <ColumnDefinition Width="136*"/>
+                                <ColumnDefinition Width="179*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="57*"/>
+                                <RowDefinition Height="11*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="图书分类：" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
+                            <ComboBox Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" Width="100" Name="comcatateroy"  ItemsSource="{Binding Categorieslist}" SelectedValue="{Binding CategoryId}" SelectedValuePath="CategoryId" DisplayMemberPath="CategoryName">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <i:InvokeCommandAction Command="{Binding ComboxChanged}">
+                                        </i:InvokeCommandAction>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </ComboBox>
+                            <TextBlock Grid.Row="1" Grid.Column="2" Text="图书条码：" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
+                            <TextBox Grid.Row="1" Grid.Column="3"  VerticalAlignment="Center" Width="120" Height="25" Name="txtbarcode" Text="{Binding BookBarcode}" VerticalContentAlignment="Center"></TextBox>
+                            <TextBlock Grid.Row="1" Grid.Column="4" Text="图书名称：" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
+                            <TextBox Grid.Row="1" Grid.Column="5"  VerticalAlignment="Center" Width="120" Height="25" HorizontalAlignment="Left" VerticalContentAlignment="Center" Name="txtbookname" Text="{Binding BookName}"></TextBox>
+                            <Button Grid.Row="1" Grid.Column="6" Content="查询" Width="80" Height="40" Name="btnsearch" Command="{Binding RedirctCommand}" CommandParameter="btnsearch"></Button>
+                        </Grid>
+                    </GroupBox>
+                    <Button Grid.Column="1" Content="删除" Width="80" Height="40" Margin="0,9,0,0" Name="btndelete" Command="{Binding RedirctCommand}" CommandParameter="btndelete"></Button>
+                    <Button Grid.Column="4" Content="关闭窗口" Width="80" Height="40" Margin="0,9,0,0"  Name="btnclosefrm" Command="{Binding RedirctCommand}" CommandParameter="btnclosefrm"></Button>
+                </Grid>
+            </Border>
+           
+            <Border Grid.Row="4" BorderThickness="1" BorderBrush="Black">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="669*"/>
+                        <ColumnDefinition Width="673*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="218*"/>
+                            <RowDefinition Height="19*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="229*"/>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="231*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" BorderThickness="0,0,1,1" BorderBrush="Black">
+                                <Image Width="296" Height="215" Stretch="Fill" Name="picimage" ></Image>
+                            </Border>
+                            <TextBlock Visibility="Hidden" Name="txtbookimage" Text="{Binding BookImage}"></TextBlock>
+                            <Border Grid.Column="2" BorderThickness="1,0,1,1" BorderBrush="Black">
+                                <Image  Width="300" Height="215" Stretch="Fill" Name="selectiamge" Source="{Binding Path=Text,ElementName=txtbookimage}"></Image>
+                            </Border>
+
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="63*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" Content="启动摄像头" Width="80" Height="45"  HorizontalAlignment="Center"></Button>
+                            <Button Grid.Column="1" Content="关闭摄像头" Width="80" Height="45" HorizontalAlignment="Center"></Button>
+                            <Button Grid.Column="2" Content="开始拍照" Width="80" Height="45" HorizontalAlignment="Center"></Button>
+                            <Button Grid.Column="3" Content="选择图片" Width="80" Height="45" HorizontalAlignment="Center" Command="{Binding RedirctCommand}" CommandParameter="btnselectpic"></Button>
+                            <Button Grid.Column="4" Content="保存修改" Width="80" Height="45" HorizontalAlignment="Center" Command="{Binding RedirctCommand}" CommandParameter="btnsavemodify"></Button>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="145*"/>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+                        <GroupBox  Header="图书基本信息">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="97*"/>
+                                    <ColumnDefinition Width="169*"/>
+                                    <ColumnDefinition Width="33*"/>
+                                    <ColumnDefinition Width="115*"/>
+                                    <ColumnDefinition Width="219*"/>
+                                    <ColumnDefinition Width="15*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="12*"/>
+                                    <RowDefinition Height="37*"/>
+                                    <RowDefinition Height="6*"/>
+                                    <RowDefinition Height="36*"/>
+                                    <RowDefinition Height="6*"/>
+                                    <RowDefinition Height="40*"/>
+                                    <RowDefinition Height="7*"/>
+                                    <RowDefinition Height="42*"/>
+                                    <RowDefinition Height="8*"/>
+                                    <RowDefinition Height="45*"/>
+                                    <RowDefinition Height="27*"/>
+                                    <RowDefinition Height="10*"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" Grid.Row="1" Content="图书名称：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                                <TextBox Grid.Column="2" Grid.Row="1" Height="25" Width="160" HorizontalAlignment="Left" VerticalContentAlignment="Center" Name="txtboxbookname" Text="{Binding BookNames}"></TextBox>
+
+                                <Label Grid.Column="4" Grid.Row="1" Content="图书分类：" VerticalAlignment="Center" HorizontalContentAlignment="Right"></Label>
+                                <ComboBox Grid.Column="5" Grid.Row="1" Height="25" Width="160" HorizontalAlignment="Left" Name="comtwocategory" ItemsSource="{Binding Categorieslist}" SelectedValue="{Binding BookCategory}" SelectedValuePath="CategoryId" DisplayMemberPath="CategoryName"></ComboBox>
+
+                                <Label Grid.Column="1" Grid.Row="3" Content="出版社：" VerticalAlignment="Center" HorizontalContentAlignment="Right"></Label>
+                                <ComboBox Grid.Column="2" Grid.Row="3" Height="25" Width="160" HorizontalAlignment="Left" Name="compublisher" ItemsSource="{Binding Publisherslist}" SelectedValue="{Binding PublisherId}" Text="{Binding PublisherName}" SelectedValuePath="PublisherId" DisplayMemberPath="PublisherName"></ComboBox>
+
+
+                                <Label Grid.Column="4" Grid.Row="3" Content="出版日期：" VerticalAlignment="Center" HorizontalContentAlignment="Right"></Label>
+                                <DatePicker Grid.Column="5" Grid.Row="3" Height="25" Width="160" HorizontalAlignment="Left" Name="datapubisherdate" SelectedDate="{Binding PublishDate}"></DatePicker>
+
+                                <Label Grid.Column="1" Grid.Row="5" Content="主编人：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                                <TextBox Grid.Column="2" Grid.Row="5" Height="25" Width="160" HorizontalAlignment="Left"  VerticalContentAlignment="Center" Text="{Binding Author}"></TextBox>
+
+                                <Label Grid.Column="4" Grid.Row="5" Content="图书原价：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                                <TextBox Grid.Column="5" Grid.Row="5" Height="25" Width="160" HorizontalAlignment="Left" VerticalContentAlignment="Center" Text="{Binding UnitPrice}"></TextBox>
+
+                                <Label Grid.Column="1" Grid.Row="7" Content="书架位置：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                                <TextBox Grid.Column="2" Grid.Row="7" Height="25" Width="160" HorizontalAlignment="Left" VerticalContentAlignment="Center" Text="{Binding BookPosition}"></TextBox>
+
+                                <Label Grid.Column="4" Grid.Row="7" Content="收藏总数：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                                <TextBox Grid.Column="5" Grid.Row="7" Height="25" Width="160" HorizontalAlignment="Left" VerticalContentAlignment="Center" IsEnabled="False" Text="{Binding BookCount}"></TextBox>
+
+                                <Label Grid.Column="1" Grid.Row="9" Content="图书条码：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                                <TextBox Grid.Column="2" Grid.Row="9" Height="25" Width="160" HorizontalAlignment="Left" VerticalContentAlignment="Center" IsEnabled="False" Text="{Binding BarCode}"></TextBox>
+
+                                <Label Grid.Column="4" Grid.Row="9" Content="图书编号：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                                <TextBox Grid.Column="5" Grid.Row="9" Height="25" Width="160" HorizontalAlignment="Left" VerticalContentAlignment="Center" IsEnabled="False" Text="{Binding BookId}"></TextBox>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding ViewLoad}">
+                <i:InvokeCommandAction.CommandParameter>
+                    <MultiBinding Converter="{StaticResource dataConverter}">
+                        <MultiBinding.Bindings>
+                            <Binding ElementName="pagesize"></Binding>
+                            <Binding ElementName="pageindex" ></Binding>
+                            <Binding ElementName="picimage" ></Binding>
+                            <Binding ElementName="selectiamge" ></Binding>
+                        </MultiBinding.Bindings>
+                    </MultiBinding>
+                </i:InvokeCommandAction.CommandParameter>
+            </i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+</UserControl>

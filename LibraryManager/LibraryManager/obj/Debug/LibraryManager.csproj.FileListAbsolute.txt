@@ -1,0 +1,80 @@
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\LibraryManager.exe.config
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\LibraryManager.exe
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\LibraryManager.pdb
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\Shell.g.cs
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\App.g.cs
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\LibraryManager_MarkupCompile.cache
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\LibraryManager_MarkupCompile.lref
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\Shell.baml
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\LibraryManager.g.resources
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\LibraryManager.Properties.Resources.resources
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csproj.GenerateResource.Cache
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\LibraryManager.exe
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\LibraryManager.pdb
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Interfaces.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Prism.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Prism.MefExtensions.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Unity.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\System.Windows.Interactivity.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Interfaces.pdb
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Unity.xml
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csprojResolveAssemblyReference.cache
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\View\MainPage.g.cs
+E:\自己做 的开发项目\LibraryManager\LibraryManager\obj\Debug\View\MainPage.baml
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\SqlMap.config
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\BLL.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\DAL.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\EntityModel.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\IBatisNet.DataMapper.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\IBatisNet.Common.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Castle.Core.dll
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\BLL.pdb
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\DAL.pdb
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\EntityModel.pdb
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\IBatisNet.DataMapper.xml
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\IBatisNet.Common.xml
+E:\自己做 的开发项目\LibraryManager\LibraryManager\bin\Debug\Castle.Core.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\SqlMap.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\LibraryManager.exe.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\LibraryManager.exe
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\LibraryManager.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\BLL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\DAL.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\EntityModel.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Interfaces.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Prism.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Prism.MefExtensions.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Unity.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\System.Windows.Interactivity.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\IBatisNet.DataMapper.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\IBatisNet.Common.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Castle.Core.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\BLL.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\DAL.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\EntityModel.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Interfaces.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Microsoft.Practices.Unity.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\IBatisNet.DataMapper.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\IBatisNet.Common.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\bin\Debug\Castle.Core.xml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\SqlMap.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\LibraryManager.exe.config
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\LibraryManager.exe
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\LibraryManager.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csprojResolveAssemblyReference.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\Shell.g.cs
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\View\MainPage.g.cs
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\App.g.cs
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\LibraryManager_MarkupCompile.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\LibraryManager_MarkupCompile.lref
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\Shell.baml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\View\MainPage.baml
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\LibraryManager.g.resources
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\LibraryManager.Properties.Resources.resources
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csproj.GenerateResource.Cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\LibraryManager.exe
+F:\图书管管理系统\图书馆管理系统\LibraryManager\LibraryManager\obj\Debug\LibraryManager.pdb

@@ -1,0 +1,5 @@
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\Common.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\Common.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\图书管管理系统\图书馆管理系统\LibraryManager\Common\obj\Debug\Common.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\Common\obj\Debug\Common.pdb

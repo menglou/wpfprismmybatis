@@ -1,0 +1,10 @@
+E:\自己做 的开发项目\LibraryManager\Interfaces\bin\Debug\Interfaces.dll
+E:\自己做 的开发项目\LibraryManager\Interfaces\bin\Debug\Interfaces.pdb
+E:\自己做 的开发项目\LibraryManager\Interfaces\obj\Debug\Interfaces.dll
+E:\自己做 的开发项目\LibraryManager\Interfaces\obj\Debug\Interfaces.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\Interfaces\bin\Debug\Interfaces.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\Interfaces\bin\Debug\Interfaces.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\Interfaces.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\bin\Debug\Interfaces.pdb
+F:\图书管管理系统\图书馆管理系统\LibraryManager\Interfaces\obj\Debug\Interfaces.dll
+F:\图书管管理系统\图书馆管理系统\LibraryManager\Interfaces\obj\Debug\Interfaces.pdb

@@ -1,0 +1,301 @@
+﻿<UserControl x:Class="FrmMemberManager.View.FrmMemberManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FrmMemberManager.View"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:converter="clr-namespace:FrmMemberManager.Converter"
+             xmlns:page="clr-namespace:CustomerControl;assembly=CustomerControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="976" d:DesignWidth="1385" Background="White">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Style/DataGridStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <converter:DataConverter x:Key="dataConverter"></converter:DataConverter>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="1347*"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="235*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="255*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="93*"/>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="502*"/>
+                <RowDefinition Height="70*"/>
+            </Grid.RowDefinitions>
+            <TabControl Grid.Column="0" Grid.Row="0" TabStripPlacement="Top">
+                <TabItem  Name="TabItem1">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Source="../Images/people.ico"></Image>
+                            <TextBlock Text="会员查询" Margin="5,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="496*"/>
+                            <ColumnDefinition Width="48*"/>
+                            <ColumnDefinition Width="715*"/>
+                            <ColumnDefinition Width="62*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11*"/>
+                            <RowDefinition Height="204*"/>
+                            <RowDefinition Height="12*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Column="1" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="289*"/>
+                                <ColumnDefinition Width="207*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="101*"/>
+                                    <ColumnDefinition Width="188*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="22*"/>
+                                    <RowDefinition Height="25*"/>
+                                    <RowDefinition Height="14*"/>
+                                    <RowDefinition Height="41*"/>
+                                </Grid.RowDefinitions>
+                                <RadioButton Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="借阅证编号：" ></RadioButton>
+                                <RadioButton Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="身份证号："></RadioButton>
+                                <TextBox Grid.Column="1" Grid.Row="0" Height="25" Width="160" HorizontalAlignment="Left" VerticalContentAlignment="Center" Text="{Binding ReadingCard}"></TextBox>
+                                <TextBox Grid.Column="1" Grid.Row="1" Height="25" Width="160" HorizontalAlignment="Left" VerticalContentAlignment="Center" Text="{Binding IdCard}"></TextBox>
+                                <Button Grid.Column="0" Grid.Row="3" Height="37" Width="90" Margin="19,21,180,21" Grid.ColumnSpan="2" Content="提交查询"></Button>
+                                <Button Grid.Column="1" Grid.Row="3" Height="37" Width="90" Content="修改信息"  ></Button>
+                            </Grid>
+                            <Border BorderThickness="1" Grid.Column="1" BorderBrush="Black"  Margin="0,10,0,19">
+                                <Image Grid.Column="1" Margin="0,-1"></Image>
+                            </Border>
+
+                        </Grid>
+
+                        <Grid Grid.Column="3" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="114*"/>
+                                <ColumnDefinition Width="196*"/>
+                                <ColumnDefinition Width="106*"/>
+                                <ColumnDefinition Width="299*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="34*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="38*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="36*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="39*"/>
+                                <RowDefinition Height="27*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Column="0" Grid.Row="0" Content="读者姓名：" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="0" Height="23" Width="180" VerticalContentAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Text="{Binding Listreader[0].ReaderName}"></TextBox>
+
+                            <Label Grid.Column="2" Grid.Row="0" Content="借阅证编号：" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14"></Label>
+                            <TextBox Grid.Column="3" Grid.Row="0" Height="23" Width="180" VerticalContentAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Text="{Binding Listreader[0].ReadingCard}" ></TextBox>
+
+                            <Label Grid.Column="0" Grid.Row="2" Content="性别：" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="2" Height="23" Width="180" VerticalContentAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Text="{Binding Listreader[0].Gender}" ></TextBox>
+
+                            <Label Grid.Column="2" Grid.Row="2" Content="会员角色：" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14"></Label>
+                            <TextBox Grid.Column="3" Grid.Row="2" Height="23" Width="180" VerticalContentAlignment="Center" HorizontalAlignment="Left" IsEnabled="False"  Text="{Binding Listreader[0].RoleName}"></TextBox>
+
+                            <Label Grid.Column="0" Grid.Row="4" Content="邮政编码：" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="4" Height="23" Width="180" VerticalContentAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Text="{Binding Listreader[0].PostCode}"></TextBox>
+
+
+                            <Label Grid.Column="2" Grid.Row="4" Content="联系电话：" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14"></Label>
+                            <TextBox Grid.Column="3" Grid.Row="4" Height="23" Width="180" VerticalContentAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Text="{Binding Listreader[0].PhoneNumber}"></TextBox>
+
+                            <Label Grid.Column="0" Grid.Row="6" Content="家庭地址：" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Height="23" Width="483" VerticalContentAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Text="{Binding Listreader[0].ReaderAddress}"></TextBox>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem  Name="TabItem2">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Source="../Images/BOOK02.ico"></Image>
+                            <TextBlock Text="会员办证" Margin="5,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="16*"/>
+                            <ColumnDefinition Width="600*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="645*"/>
+                            <ColumnDefinition Width="55*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="206*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Column="1" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="171*"/>
+                                <ColumnDefinition Width="39*"/>
+                                <ColumnDefinition Width="171*"/>
+                                <ColumnDefinition Width="223*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" Grid.Row="0" BorderThickness="1" BorderBrush="Black">
+                                <Image Stretch="Fill"></Image>
+                            </Border>
+
+                            <Border Grid.Column="2" Grid.Row="0" BorderThickness="1" BorderBrush="Black">
+                                <Image Stretch="Fill" ></Image>
+                            </Border>
+                            <Grid Grid.Column="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50*"/>
+                                    <RowDefinition Height="50*"/>
+                                    <RowDefinition Height="50*"/>
+                                    <RowDefinition Height="50*"/>
+                                </Grid.RowDefinitions>
+                                <Button Grid.Row="0" Width="120" Height="40" Content="启动摄像头"></Button>
+                                <Button Grid.Row="1" Width="120" Height="40" Content="关闭摄像头"></Button>
+                                <Button Grid.Row="2" Width="120" Height="40" Content="开始拍照"></Button>
+                                <Button Grid.Row="3" Width="120" Height="40" Content="确认添加" Name="btnconfirmadd" Command="{Binding RedirctCommand}" CommandParameter="btnconfirmadd"></Button>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="3" Grid.Row="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="187*"/>
+                                <ColumnDefinition Width="93*"/>
+                                <ColumnDefinition Width="260*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="37*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="40*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="39*"/>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="42*"/>
+                                <RowDefinition Height="12*"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Column="0" Grid.Row="1" Content="读者姓名：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="1" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Width="178" VerticalContentAlignment="Center" Name="txtreadername" Text="{Binding Readers.ReaderName}"></TextBox>
+
+                            <Label Grid.Column="2" Grid.Row="1" Content="借阅证编号：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                            <TextBox Grid.Column="3" Grid.Row="1" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Width="178" VerticalContentAlignment="Center" Name="txtreadingcard" Text="{Binding Readers.ReadingCard}"></TextBox>
+                            
+                            <Label Grid.Column="0" Grid.Row="3" Content="性别：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                            <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Orientation="Horizontal">
+                                <RadioButton Content="男"  GroupName="sex" Name="male" IsChecked="{Binding Gendermale}"></RadioButton>
+                                <RadioButton Content="女" Margin="40,0,0,0"  GroupName="sex" Name="felmale" IsChecked="{Binding GenderFelmale}"></RadioButton>
+                            </StackPanel>
+
+                            <Label Grid.Column="2" Grid.Row="3" Content="会员角色：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                            <ComboBox Grid.Column="3" Grid.Row="3" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Width="178" Name="comreaderrole" ItemsSource="{Binding Readerrols}" SelectedValue="{Binding Readers.RoleId}" SelectedValuePath="RoleId" DisplayMemberPath="RoleName" VerticalContentAlignment="Center"></ComboBox>
+
+                            <Label Grid.Column="0" Grid.Row="5" Content="邮政编码：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="5" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Width="178" Name="txtpostcode" VerticalContentAlignment="Center" Text="{Binding Readers.PostCode}"></TextBox>
+
+                            <Label Grid.Column="2" Grid.Row="5" Content="联系电话：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                            <TextBox Grid.Column="3" Grid.Row="5" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Width="178" Name="txtphonenumber" VerticalContentAlignment="Center" Text="{Binding Readers.PhoneNumber}"></TextBox>
+
+
+                            <Label Grid.Column="0" Grid.Row="7" Content="现住地址：" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Name="txtaddress" Width="458" VerticalContentAlignment="Center" Text="{Binding Readers.ReaderAddress}"></TextBox>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="152*"/>
+                    <ColumnDefinition Width="196*"/>
+                    <ColumnDefinition Width="182*"/>
+                    <ColumnDefinition Width="144*"/>
+                    <ColumnDefinition Width="178*"/>
+                    <ColumnDefinition Width="179*"/>
+                    <ColumnDefinition Width="165*"/>
+                    <ColumnDefinition Width="151*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="按照会员角色查询：" VerticalAlignment="Center" FontSize="14" HorizontalAlignment="Right"></Label>
+                <ComboBox Grid.Column="1" Height="28" Width="155" HorizontalAlignment="Left" VerticalContentAlignment="Center" ItemsSource="{Binding Readerrols}" SelectedValue="{Binding RoleId}" SelectedValuePath="RoleId" DisplayMemberPath="RoleName"></ComboBox>
+                <Button Grid.Column="2" Height="45" Width="130" Content="按照角色查询" Name="btnserachbyrole" Command="{Binding RedirctCommand}" CommandParameter="btnserachbyrole"></Button>
+                <Label Content="对应会员总数：" Grid.Column="3" VerticalAlignment="Center" FontSize="14" HorizontalAlignment="Right"></Label>
+                <TextBox Grid.Column="4" Height="28" Width="140" HorizontalAlignment="Left" IsEnabled="False" VerticalContentAlignment="Center" FontSize="15" Text="{Binding ReaderCount}"></TextBox>
+                <Button Grid.Column="6" Height="50" Width="110" Content="挂失借阅证"></Button>
+                <Button Grid.Column="7" Height="50" Width="110" Content="关闭窗口"></Button>
+            </Grid>
+
+            <DataGrid Grid.Row="4" ItemsSource="{Binding Readerslist}" Visibility="Hidden" Name="listreader"  IsReadOnly="True" RowHeaderWidth="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False" />
+
+            <TextBlock Visibility="Hidden" Name="fistpage" Text="{Binding Fistpage,Mode=TwoWay}"></TextBlock>
+            <TextBlock Visibility="Hidden" Name="nextpage" Text="{Binding Nextpage,Mode=TwoWay}"></TextBlock>
+            <TextBlock Visibility="Hidden" Name="previewpage" Text="{Binding Previewpage,Mode=TwoWay}"></TextBlock>
+            <TextBlock Visibility="Hidden" Name="lastpage" Text="{Binding LastPage,Mode=TwoWay}"></TextBlock>
+            <TextBlock Visibility="Hidden" Name="redirecttopage" Text="{Binding Redirttopage,Mode=TwoWay}"></TextBlock>
+            <TextBlock Visibility="Hidden" Name="pagecount" Text="{Binding PageCount}"></TextBlock>
+
+            <TextBlock Visibility="Hidden" Name="readingcard" Text="{Binding Readers.ReadingCard}"></TextBlock>
+            <TextBlock Visibility="Hidden" Name="roled" Text="{Binding Readers.RoleId}"></TextBlock>
+            <TextBlock Visibility="Hidden" Name="idcard" Text="{Binding Readers.IDCard}"></TextBlock>
+
+
+            <Border Grid.Row="5" BorderThickness="1" BorderBrush="Gray">
+                <page:Paging  Width="800" HorizontalAlignment="Left" Name="page"  ReaderList="{Binding Path=ItemsSource,ElementName=listreader}" PageCount="{Binding Path=Text,ElementName=pagecount}" ButtonFistpage="{Binding Path=Text,ElementName=fistpage,Mode=TwoWay}" ButtonNexpage="{ Binding Path=Text,ElementName=nextpage,Mode=TwoWay}" ButtonPreviewpage="{Binding Path=Text,ElementName=previewpage,Mode=TwoWay}" ButtonLastpage="{Binding Path=Text,ElementName=lastpage,Mode=TwoWay}" ButtonRedirttopage="{Binding Path=Text,ElementName=redirecttopage,Mode=TwoWay}"></page:Paging>
+            </Border>
+            
+            <TextBlock Visibility="Hidden" Name="pagesize" Text="{Binding PageSize,ElementName=page}"></TextBlock>
+            <TextBlock Visibility="Hidden" Name="pageindex" Text="{Binding PageIndex,ElementName=page}"></TextBlock>
+
+            <DataGrid Grid.Row="4" ItemsSource="{Binding Path=ReaderList,ElementName=page}" Name="readerlist"  IsReadOnly="True" RowHeaderWidth="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="读者编号" Width="220" Binding="{Binding ReaderId}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="借阅证编号" Width="200" Binding="{Binding ReadingCard}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="姓名" Width="100" Binding="{Binding ReaderName}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="性别" Width="80" Binding="{Binding Gender}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="联系电话" Width="150" Binding="{Binding PhoneNumber}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="会员状态" Width="100" Binding="{Binding StatusName}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="办证时间" Width="150" Binding="{Binding RegTime,StringFormat={}{0:yyyy-MM-dd}}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="通信地址" Width="395" Binding="{Binding ReaderAddress}"></DataGridTextColumn>
+                </DataGrid.Columns>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDoubleClick">
+                        <i:InvokeCommandAction Command="{Binding DataGridAction}" CommandParameter="{Binding ElementName=readerlist}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </DataGrid>
+        </Grid>
+    </Grid>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding ViewLoad}">
+                <i:InvokeCommandAction.CommandParameter>
+                    <MultiBinding Converter="{StaticResource dataConverter}">
+                        <MultiBinding.Bindings>
+                            <Binding ElementName="pagesize"></Binding>
+                            <Binding ElementName="pageindex" ></Binding>
+                        </MultiBinding.Bindings>
+                    </MultiBinding>
+                </i:InvokeCommandAction.CommandParameter>
+            </i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+</UserControl>

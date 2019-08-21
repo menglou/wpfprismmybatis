@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="LibraryManager.View.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LibraryManager.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="976" d:DesignWidth="1385">
+    <Grid Width="1385" Height="976">
+        <Grid.Background >
+            <ImageBrush ImageSource="/Images/图书馆背景.jpg"></ImageBrush>
+        </Grid.Background>
+    </Grid>
+</UserControl>
